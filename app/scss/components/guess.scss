@@ -1,0 +1,37 @@
+@use '../util' as *;
+
+.guess {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    gap: rem(3);
+    width: rem(330);
+    margin-bottom: rem(10);
+
+    &__tile {
+        border: rem(2) solid hsl(0, 0%, 26%);
+        width: rem(62);
+        height: rem(62);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(32);
+        font-weight: 600;
+    }
+
+    .has-letter {
+        border: rem(2) solid hsl(0, 0%, 40%);
+    }
+
+    .correct {
+        background-color: hsl(120, 99%, 26%);
+        border-color: hsl(120, 99%, 26%);
+    }
+    .present {
+        background-color: hsl(49, 51%, 47%);
+        border-color: hsl(49, 51%, 47%);
+    }
+    .absent {
+        background-color: hsl(0, 0%, 46%);
+        border-color: hsl(0, 0%, 46%);
+    }
+}
